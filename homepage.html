@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #navbar{
+            width:100%;
+            height:52px;
+            position:fixed;
+            background-color: black;
+            display: flex;
+            justify-content:space-between;
+        }
+        #navbar>img{
+            width:52px;
+            margin-left:40px;
+             cursor: pointer;
+        }
+        button{
+          color:white;
+          border:none;
+          width:100px;
+          margin-top:10px;
+          border-radius: 5px;
+          height: 30px;
+          margin-right: 30px;
+          background-color: blue;
+          cursor: pointer;
+        }
+      #Himg > img{
+        width:100%;
+      }
+      #Himg > h1 {
+        text-align: center;
+        position:absolute;
+        color:white;
+        width:800px;
+        font-size:80px;
+        top:70%;
+        left:22%;
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      #Himg > p{
+        box-sizing: border-box;
+        display: block;
+        overflow-wrap: break-word;
+        text-align: center;
+        position:absolute;
+        color:white;
+        width:1000px;
+        font-size:25px;
+        top:87%;
+        left:13%;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight:600;  
+      }  
+      #button>button{
+        position: absolute;
+        top: 94%;
+        left:45%;
+        width:200px;
+        height:40px;
+        background-color:white;
+        color:rgba(0,0,0,0.88);
+        font-weight:600;
+        padding:0px 16px;
+        border-bottom-color:rgba(0,0,0,0.88);
+        border-left-color:rgba(0,0,0,0.88);
+        border-top-color:rgba(0,0,0,0.88);
+        border-right-color:rgba(0,0,0,0.88);
+        color-scheme: light dark;
+        display: inline-block;
+        align-items: flex-start;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        border-radius: 6px;;
+      }
+      #button>p{
+        position:absolute;
+        top:102%;
+        left:23%;
+        color:#7d7d7e;
+        width:800px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 18px;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      #button>p>a{
+        color:#007AFF;
+        text-decoration: none;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         text-size-adjust: 100%;
+      }
+      /* CSS part-2 */
+      .main>h4{
+        width:500px;
+        margin-left: 37px;
+        padding-top: 20px;
+        margin-top:50px;
+        padding-bottom: 1px;;
+        font-size: 17px;
+        letter-spacing: 0.6px;
+        line-height: 1.23;
+        opacity: 0.8;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .main>p{
+        width:500px;
+        margin-left: 37px;
+        padding-top: 5px;;
+        margin-bottom: 20px;
+        color: #7d7d7e;
+      }
+      .main>div{
+        display: grid;
+        /* border:1px solid red; */
+        grid-template-columns: repeat(8,300px);
+        grid-template-rows: auto;
+        gap:25px;
+        width:100%;
+        height:200px;
+      }
+      .main>div>div{
+        width:300px;
+        height:200px;
+        /* border:1px solid blue; */
+        margin-left: 35px;
+      }
+      .main>div>div>img{
+        width:100%;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+         /* most popular now   */
+         .five{
+          /* border:1px solid red; */
+          display:grid;
+          grid-template-columns: repeat(10,230px);
+          grid-template-rows: auto;
+          gap:25px;
+          width:100%;
+          height:180px;
+         }
+         .five>div{
+          /* border:1px solid blue; */
+          width:100%;
+          height:150px;
+         }
+         .five>div>img{
+          width:100%;  
+          border-radius: 10px;
+          margin-left: 40px;;
+          cursor: pointer;
+         }
+         .five>div>p:nth-child(3){
+          margin-left: 40px;
+         }
+
+         .head{
+        margin-left: 30px;
+        padding:10px;
+        font-size: 17px;
+        opacity: 0.8;
+        }
+        .ft{
+          font-size:11px;
+          /* border:1px solid green; */
+          font-weight: bold;
+          opacity: 0.7;
+          margin-left: 40px;
+        }
+        .dt{
+          /* border:1px solid blue; */
+          font-size: 12px;
+          opacity: 0.8;
+          margin-left: 40px;
+        }
+        /* part-3 CSS(coming soon) */
+        .txt{
+          position: absolute;
+          top:320%;
+          /* color:white; */
+          /* border:1px solid red; */
+          text-align: center;
+          font-size: 14px;
+          font-weight: 650;
+          width:300px;
+          color: rgb(243, 250, 215);
+        }
+        #mid{
+          width:100%;
+          /* border: 1px solid red; */
+        }
+        #mid>img{
+          width:100%;
+        }
+        #mid>p:nth-child(2){
+          /* border:1px solid red; */
+          position: absolute;
+          top:400%;
+          color:white;
+          left:4%;
+          font-size: 12px;;
+          opacity: 0.8;
+        }
+        #mid>h1{
+          /* border:1px solid red; */
+          position: absolute;
+          top: 402%;
+          color:white;
+          left:3%;
+          font-size:25px;
+          width:300px;
+          opacity: 0.9;
+        }
+        #mid>p:nth-child(4){
+          /* border:1px solid red; */
+          position: absolute;
+          top:413%;
+          color:white;
+          left:3%;
+          font-size: 17px;;
+          opacity: 0.7;
+          width:400px;
+        }
+        #mid>div{
+         display: grid;
+         grid-template-columns: repeat(8,200px);
+         grid-template-rows: auto;
+         width:100%;
+         height:200px;
+         gap: 20px;;
+         /* border:1px solid blue; */
+         position: absolute;
+         top:438%;
+         margin-left:3%;
+        }
+        #mid>div>div>img{
+          width:100%;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        .white{
+           color:white;
+           font-size: 13px;
+           opacity: 0.8;
+           cursor: pointer;
+        }
+     #bt{
+      position: absolute;
+      top:113%;
+      left:50%;
+     }
+     #bt>img{
+     width:15px;
+     cursor: pointer;
+     }
+      
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <img src="https://tv.apple.com/assets/brands/Apple_TV_plus_logo_white-2721485772b7d06c4e33379ce990870e.svg"
+         alt="">
+        <button>Sign In </button>
+    </div>
+    <div id="Himg">
+        <img src="https://is5-ssl.mzstatic.com/image/thumb/Features122/v4/e4/0e/3d/e40e3dbc-a7e8-6c94-bbd3-60127ee688ad/c952782b-6707-468e-8647-f43c176ad5cf.png/999x562sr.jpg"
+         alt="">
+        <h1>All Apple Originals.</h1>
+         <p>Exclusively on Apple TV+. Watch here and on the Apple TV app across your devices. </p>
+    </div>
+    <div id="button">
+      <button>Start Free Trial</button>
+      <p>7 days free,then $4.99/month. <br>
+        Or 3 months free when you buy an eligible Apple device.
+        <a href="">Terms apply.</a>Some titles coming later to Apple TV+.
+      </p>
+    </div>
+     <!-- part 2 -->
+     <div id="bt"><img src="https://tv.apple.com/assets/button_glyphs/chevron_down_white-ac33693b2675c26fc4eab8fb94b6190c.png" alt=""></div>
+    <div class="main">
+      <h4>For All Mankind:Watch Season 1 Free for a Limited Time</h4>
+      <p>A thrilling "what if" take on the global space race.</p>
+
+       <div>
+        <div><img src="https://is2-ssl.mzstatic.com/image/thumb/Features112/v4/90/a7/b6/90a7b6a7-04f4-ba38-11cd-77978c92e2fc/6dd93a9c-8082-4079-abd0-245e4fd8192c.lsr/1478x832fe.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is5-ssl.mzstatic.com/image/thumb/Features122/v4/a5/dc/cd/a5dccd03-d89f-8dc7-d253-fa6876e7601f/a03790ea-bca4-4249-b9ad-d13f1a07d654.lsr/1478x832fe.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/98/33/a3/9833a393-d405-b5bb-2812-9f944a1072e7/3a9fe1af-3db9-4aca-8851-5d3460a4d115.lsr/1478x832fe.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is5-ssl.mzstatic.com/image/thumb/Features122/v4/7e/57/a6/7e57a60f-9be2-54a1-03f4-62f859f5a649/2644edb0-fde9-4a43-b2c5-dc28c368a89e.lsr/1478x832fe.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/Features122/v4/27/ed/14/27ed1408-6bb2-46ac-2523-66bc508d0618/d6340feb-a8de-405e-9ffa-31622d797990.lsr/1478x832fe.webp" alt="">
+        </div>
+       </div>
+        
+      </div>
+       <!-- child div  -->
+       <h4 class="head">Most Popular Now</h4>
+       <div class="five">
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/kjrFHClZ3Bt-pT0MJnwdFw/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/GT66HoV8VJL1IZwaqos_TQ/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/XiXPs1AKOFQE7cq7AVlJeQ/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/vPnF3gIE_xEMoXPI1SyluA/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/78-I7VenST4ztZYfwMf6AQ/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is3-ssl.mzstatic.com/image/thumb/neRAWaMZZ5xVz4fnbFXJUA/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is3-ssl.mzstatic.com/image/thumb/AWDRdQz0nepFpnsUNiTDuw/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/fiTyznFr4Rsvd25TNhffww/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/2hSgeI8AyyKcpu_6Rhwg1w/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/lN-bUPh0Botn7U7jKgbnFg/738x416.webp" alt="">
+        </div>
+       </div>
+       <h4 class="head">Watch Entire Seasons</h4>
+       <div class="five">
+        <div>
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/UPoQbHoPte_TFJXEvKIIsw/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/6tJakyTEtS0vrgdc9POZpg/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/QiFf4rD5DY65HbtJUOjE7Q/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/vWs6dt5xDhG_DjIoc-89tA/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is3-ssl.mzstatic.com/image/thumb/kVTKGnVvCdFlB1sZeKa8YQ/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Tb1jarRHaWN_SFiMjZcDHw/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/vB48H4eBprLJ-WdCBTA6cw/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/SEsiWD2cTDShiJqUtRPAxg/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/dbEKo7rp5RGNNDrCbA7AUQ/738x416.webp" alt="">
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/qYEYYvFXN2O4zEuCcBSbjw/738x416.webp" alt="">
+        </div>
+       </div>
+       <h4 class="head">Latest Originals</h4>
+       <div class="five">
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/kjrFHClZ3Bt-pT0MJnwdFw/1478x832.webp" alt="">
+          <p class="ft">DRAMA</p>
+          <p>For All Mankind</p>
+          <p class="dt">A new competitor join the global space race in season 3 of the thrilling drama series.</p>
+        </div>
+        <div>
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/_WDO4pxq_b43sYn1s-nJQg/1478x832.webp" alt="">
+          <p class="ft">KIDS & FAMILY</p>
+          <p>Lovely Litle Farm</p>
+          <p class="dt">Two young sister start their very own special farm where everyday is an advanture.</p>
+        </div>
+        <div>
+          <img src="https://is3-ssl.mzstatic.com/image/thumb/neRAWaMZZ5xVz4fnbFXJUA/1478x832.webp" alt="">
+          <p class="ft">COMEDY</p>
+          <p>Physical</p>
+          <p class="dt">Shella hustles to turn her fitness empire dreams into reality in the second season.</p>
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/vPnF3gIE_xEMoXPI1SyluA/1478x832.webp" alt="">
+          <p class="ft">DOCUMENTARY</p>
+          <p>Prehistoric Planet</p>
+          <p class="dt">An epic series that lets you exprience the world of dinosaurs like never before.</p>
+        </div>
+        <div>
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/q9_3U3s5W2xyotbNEgDWgA/1478x832.webp" alt="">
+          <p class="ft">COMEDY</p>
+          <p>Carpool Karaoke:The Series</p>
+          <p class="dt">Take a musical ride with the D'Amelio family,The White Lotus cast,and more.</p>
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/lQggjzswj8ZD1hym1_oVGQ/1478x832.webp" alt="">
+          <p class="ft">KIDS & FAMILY</p>
+          <p>Helpsters</p>
+          <p class="dt">Cody and the team of helpful monsters are back to solve new problems big and small.</p>
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/5SQrBAWXONSSRweUSmuRyg/1478x832.webp" alt="">
+          <p class="ft">DRAMA</p>
+          <p>Now and Then</p>
+          <p class="dt">Five former friends reunite when a blackmailer threatens to expose their dark secret.</p>
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/BXmR2-KFYGt0UOGwMaocBg/1478x832.webp" alt="">
+          <p class="ft">KIDS & FAMILY</p>
+          <p>Harriet the Spy</p>
+          <p class="dt">The animated adaptation of the beloved children's book is back with all-new episodes.</p>
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/2hSgeI8AyyKcpu_6Rhwg1w/1478x832.webp" alt="">
+          <p class="ft">DRAMA</p>
+          <p>The Essex Serpent</p>
+          <p class="dt">A London widow moves to Essex to investigate a mythical serpent.</p>
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/MP-C7FdZjq2Clj0BSxDbXg/1478x832.webp" alt="">
+          <p class="ft">DOCUMENTARY</p>
+          <p>Greatness Code</p>
+          <p class="dt">A new season brings six new history-making athletes and their story of greatness.</p>
+        </div>
+       </div>
+       <div class="main">
+        <h4>Coming Soon </h4>
+        <p>Add to your Up Next watchlist today</p>
+         <div>
+          <div><img src="https://is3-ssl.mzstatic.com/image/thumb/Features122/v4/93/03/f9/9303f9f2-6ee7-c1ec-3800-f596df3b9efc/a8e96666-82df-4adb-b5c3-9d619f4a1003.lsr/1478x832fe.webp" 
+            alt="">
+            <p class="txt">New Flim Premieres Friday</p>
+          </div>
+          <div>
+            <img src="https://is4-ssl.mzstatic.com/image/thumb/Features116/v4/2a/02/87/2a0287df-debe-7eac-1db9-78f3eb2cdb95/c71ff327-e42a-4833-9f36-514c85b3d181.lsr/1478x832fe.webp" 
+            alt="">
+            <p class="txt">New Season Premiere Friday</p>
+          </div>
+          <div>
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/4b/70/db/4b70dbe5-a278-90a8-55d8-dd1b12b64da9/68a3dc74-3669-4eff-a4bc-69f7e9bd5a58.lsr/1478x832fe.webp"
+             alt="">
+             <p class="txt">New Series Premieres June 24</p>
+          </div>
+          <div>
+            <img src="https://is2-ssl.mzstatic.com/image/thumb/Features126/v4/64/64/9a/64649a88-adb8-c15f-5dca-9e8a72410775/a60b4f94-872f-42b0-81e6-851452d0bee6.lsr/1478x832fe.webp" 
+            alt="">
+            <p class="txt">New Series Premieres June 24</p>
+          </div>
+          <div>
+            <img src="https://is5-ssl.mzstatic.com/image/thumb/Features112/v4/b1/42/5d/b1425dab-00f3-acad-7ec5-1a0b6d219a23/85c41100-4128-4739-840c-e4e625a60bce.lsr/1478x832fe.webp" 
+            alt="">
+            <p class="txt">New Series Premieres July 8</p>
+          </div>
+          <div>
+            <img src="https://is2-ssl.mzstatic.com/image/thumb/Features112/v4/03/eb/ac/03ebac8b-a2f1-d489-09c1-64730d006baa/f74929f0-c94c-4489-8882-ea962aa6998b.lsr/1478x832fe.webp" 
+            alt="">
+            <p class="txt">New Season Premieres July 22</p>
+          </div>
+          <div>
+            <img src="https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/3f/5c/8c/3f5c8cc0-1a6d-bfea-f5aa-6c8a209dcdef/879754b7-d036-4a3c-8f91-6d03eab36885.lsr/1478x832fe.webp" 
+            alt="">
+            <p class="txt">New Series Premieres July 29</p>
+          </div>
+          <div>
+            <img src="https://is2-ssl.mzstatic.com/image/thumb/Features126/v4/0b/40/74/0b4074fa-027c-1e35-244c-607e61f1d075/47c2bd08-35ba-495c-837f-1201ba7f7342.lsr/1478x832fe.webp" 
+            alt="">
+            <p class="txt">New Flim Premieres August 5</p>
+          </div>
+         </div>
+        </div>
+        <div class="main">
+          <h4>Major League Baseball</h4>
+          <p>Free for a limited time,watch Friday Night Baseball and daily coverage.</p>
+           <div>
+            <div><img src="https://is2-ssl.mzstatic.com/image/thumb/Features116/v4/fe/30/99/fe30991b-023f-65db-6c47-9bcaacab5977/90310982-ea94-40a5-81e4-9d8de34c261e.lsr/1478x832fe.webp" alt="">
+            </div>
+            <div>
+              <img src="https://is2-ssl.mzstatic.com/image/thumb/Features126/v4/f4/0a/4a/f40a4ac5-1d02-811d-f16b-9f5516fb7156/e42ffec9-d624-47fc-8dba-674142619205.lsr/1478x832fe.webp" alt="">
+            </div>
+            <div>
+              <img src="https://is4-ssl.mzstatic.com/image/thumb/Features116/v4/43/bb/de/43bbde5e-e7df-6f87-47ff-7cdfc211dc21/b07c188b-e1a2-4020-a4fc-c3fa00aa22d8.lsr/1478x832fe.webp" alt="">
+            </div>
+            <div>
+              <img src="https://is4-ssl.mzstatic.com/image/thumb/Features126/v4/9a/31/b3/9a31b32d-49b2-883c-4980-d21c4a54ca61/99152498-54bf-4672-a902-6b6785530333.lsr/1478x832fe.webp" alt="">
+            </div>
+            <div>
+              <img src="https://is2-ssl.mzstatic.com/image/thumb/Features126/v4/e2/3b/69/e23b6978-fc88-161d-ccbc-1d9cb58c7037/533471c3-b683-43aa-9392-f8aac00eef66.lsr/1478x832fe.webp" alt="">
+            </div>
+           </div>
+          </div>
+
+    <div id="mid">
+      <img src="https://is4-ssl.mzstatic.com/image/thumb/Features112/v4/0e/7d/44/0e7d448d-140a-bac1-3c73-4b560bdff4c4/9c4db295-abea-4591-b192-c724006dc239.png/1320x495sr.png" alt="">
+      <p>SCI-FI</p>
+      <h1>Immerse Yourself in the Extraodinary</h1>
+      <p>Discover series and flims that will take you places you never imagined.</p>
+
+        <div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Features122/v4/50/24/40/502440c0-ecdd-81fb-a96e-40e0a7b65cd9/9b30a927-8c20-4e33-be59-055b77940c4f.lsr/670x377sr.webp"
+           alt="">
+           <p class="white">For All Mankind</p>
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/f1/96/9a/f1969aee-667d-ac38-9de5-3dd1cac02737/0df74eae-f292-4dbd-93a5-33791299ef6b.lsr/670x377sr.webp" 
+          alt="">
+          <p class="white">Foundation</p>
+        </div>
+        <div>
+          <img src="https://is5-ssl.mzstatic.com/image/thumb/Features112/v4/57/09/29/570929df-d455-eb08-a0e5-4cdfc99bb6cf/4388f695-59aa-4eb8-a1f6-c13cc367463e.lsr/335x189sr.webp" 
+          alt="">
+          <p class="white">Severance</p>
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Features122/v4/f1/0f/1f/f10f1f57-f7aa-936d-cd14-3eb60b94e132/69916d62-39ea-4a61-86e7-f8976616d690.lsr/670x377sr.webp"
+          alt="">
+          <p class="white">See</p>
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/89/fc/78/89fc78ac-722e-5f25-6bb3-7e8efadae6c8/ba96707a-fe96-4b37-aade-649dd43c22ed.lsr/670x377sr.webp" 
+          alt="">
+          <p class="white">Finch</p>
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/Features122/v4/00/16/b8/0016b890-4c98-3c78-de20-5b6b1bf29601/c1e069a8-798b-499c-b220-07d0b601dca4.lsr/335x189sr.webp" 
+          alt="">
+          <p class="white">Swan Song</p>
+        </div>
+        <div>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/c4/09/6c/c4096c93-a8df-cbfe-4a09-346360621b7d/20d8745d-fac3-400e-ae82-47da1ac1472d.lsr/670x377sr.webp"
+           alt="">
+           <p class="white">Dr.Brain</p>
+        </div>
+        <div>
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/Features112/v4/e3/08/0c/e3080c1f-78fb-e1bd-70dc-625e8f50a02d/2afaf32c-2766-4357-820e-ebd243775f1d.lsr/335x189sr.webp" 
+          alt="">
+          <p class="white">Invasion</p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
