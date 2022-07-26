@@ -30,7 +30,23 @@ promise
   .then((result) => result + "?") // it worked?
   .then((reslut2) => reslut2 + "*") // it worked?*
   .then((result3) => {
-    throw Error// it is for example 
+    throw Error; // it is for example
     console.log(result3);
   })
-.catch(()=>console.log("error in result 3!"))
+  .catch(() => console.log("error in result 3!"));
+
+// Async await
+
+async function move() {
+  // returns a promise
+  await runDirection(100, "Top"); // wait for the promise
+  await runDirection(200, "Left");
+  await runDirection(300, "Bottom");
+  await runDirection(400, "Right");
+}
+
+async function print() {
+  return 6;
+}
+print();
+

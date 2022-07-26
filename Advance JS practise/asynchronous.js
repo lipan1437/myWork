@@ -36,7 +36,7 @@
    myCalculator(10,15)
 
 
-   // call hell 
+   // callback  Hell 
 
    // runDirection(100,"Top",function(){
    //    runDirection(200,"Left",function(){
